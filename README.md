@@ -2,7 +2,7 @@
 
 # Elevator Control System 🚪⬆⬇
 
-This is a simple simulation of an elementary elevator control system written in C# using a clean, layered architecture.
+This is a simple simulation of an elementary elevator control system written in C#.
 
 ## 🏗️ Features
 
@@ -20,14 +20,6 @@ This is a simple simulation of an elementary elevator control system written in 
   - `ElevatorScheduler`: Assigns requests to the best available elevator.
   - `RequestGenerator`: Generates random floor/direction requests.
 - **Entry Point**: `Program.cs` runs the simulation loop.
-
-## 📂 Project Structure
-
-ElevatorSystem/
-├── Models/
-├── Services/
-├── Program.cs
-└── README.md
 
 ## 🧪 Usage
 
