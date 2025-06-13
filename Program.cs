@@ -1,5 +1,5 @@
-﻿using ElevatorSystem.Services;
-using ElevatorSystem.Models;
+﻿using ElevatorSystem.Models;
+using ElevatorSystem.Services;
 
 namespace ElevatorSystem;
 
@@ -19,7 +19,7 @@ public class Program
             Console.WriteLine($"\n--- Simulation Step {step + 1} ---");
 
             var request = generator.GenerateRandomRequest(FloorCount);
-            controller.HandleRequest(request);
+            controller.HandleRequest(request, FloorCount);
 
             controller.AdvanceOneStep();
 
@@ -31,8 +31,8 @@ public class Program
 }
 
 ////Uncomment code below for custom elevator requests
-//using ElevatorSystem.Services;
 //using ElevatorSystem.Models;
+//using ElevatorSystem.Services;
 
 //namespace ElevatorSystem;
 
@@ -49,7 +49,8 @@ public class Program
 //        {
 //            new ElevatorRequest(3, Direction.Up),
 //            new ElevatorRequest(7, Direction.Up),
-//            new ElevatorRequest(1, Direction.Up),
+//            new ElevatorRequest(3, Direction.Up),
+//            new ElevatorRequest(4, Direction.Up),
 //            new ElevatorRequest(9, Direction.Down),
 //            new ElevatorRequest(5, Direction.Down),
 //            new ElevatorRequest(3, Direction.Up),
@@ -58,8 +59,8 @@ public class Program
 //        for (int i = 0; i < customRequests.Count; i++)
 //        {
 //            Console.WriteLine($"\n--- Step {i + 1}: Handling Request on Floor {customRequests[i].RequestedFloor} ({customRequests[i].RequestedDirection}) ---");
-//            controller.HandleRequest(customRequests[i]);
-//            controller.Step();
+//            controller.HandleRequest(customRequests[i], FloorCount);
+//            controller.AdvanceOneStep();
 
 //            Thread.Sleep(10000); // Simulate 10 seconds per step
 //        }
